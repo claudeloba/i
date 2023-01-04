@@ -1,0 +1,51 @@
+@use "./mixins" as a;
+
+%logo {
+  @include a.text-style-paragraph-lg;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    -200deg,
+    var(--primary),
+    var(--secondary),
+    var(--tertiary)
+  );
+  background-clip: text;
+  letter-spacing: 0.8rem;
+  -webkit-text-fill-color: transparent;
+}
+
+%button {
+  margin: 2rem;
+  overflow: hidden;
+  background-color: var(--light);
+  border: 0 solid #e2e8f0;
+  border-radius: var(--border-radius);
+  color: #0d172a;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  padding: 1.6rem 2rem;
+  text-align: center;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--box-shadow);
+  @include a.text-style-paragraph-lg;
+
+  &:hover {
+    background-color: var(--dk);
+    color: var(--light);
+
+    transform: translateY(-0.3rem);
+  }
+  &:focus {
+    transform: translateY(-0.1rem);
+  }
+}
+
+%dropdown {
+  border: 1px solid black;
+  box-shadow: var(--box-shadow);
+  flex-basis: 100%;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+}

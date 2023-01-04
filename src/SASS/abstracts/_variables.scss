@@ -1,0 +1,17 @@
+@forward "../base/typography";
+
+:root {
+  --font: "Inter", sans-serif;
+  --light: rgb(237, 237, 237);
+  --dk: rgb(34, 34, 34);
+  --light-grey: rgb(237, 237, 237);
+  --mid-grey: rgb(153, 153, 153);
+  --dark-grey: rgb(68, 68, 68);
+  --border-radius: 1.5rem;
+  --primary: #40e0d0;
+  --secondary: #ff8c00;
+  --tertiary: #ff0080;
+  --fouth: #000;
+  --fifth: #fff;
+  --box-shadow: 0rem 0.2rem 0.4rem rgba(166, 175, 195, 0.25);
+}

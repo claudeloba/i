@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@forward "abstracts";
+
+// 2. Vendors
+@forward "vendors/normalize";
+
+// 3. Base stuff
+@forward "base";
+
+// 5. Components
+@forward "components";
+
+body {
+  // overflow-y: hidden;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+  background: #70e1f5; /* fallback for old browsers */
+  // background: url("../../layered-waves-haikei.svg") no-repeat center;
+
+  background-size: cover;
+
+  background: linear-gradient(90deg, #ff8008 0%, #ffc837 100%);
+  overflow: hidden;
+}

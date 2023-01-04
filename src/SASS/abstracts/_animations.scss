@@ -1,0 +1,23 @@
+// https://animista.net/play/background/bg-pan
+
+.bg-pan-left {
+  -webkit-animation: bg-pan-left 8s both;
+  animation: bg-pan-left 8s both;
+}
+
+@-webkit-keyframes bg-pan-left {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes bg-pan-left {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -1,0 +1,17 @@
+@use "../abstracts" as a;
+@forward "../abstracts/placeholders";
+
+.main-container {
+  margin: 4rem;
+  position: relative;
+  overflow: scroll;
+  border-radius: var(--border-radius);
+  @include a.centerwidth;
+  height: 70rem;
+  max-width: 120rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

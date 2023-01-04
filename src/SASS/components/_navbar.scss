@@ -1,0 +1,35 @@
+@use "../abstracts" as a;
+@forward "../abstracts/placeholders";
+
+.navbar {
+  @include a.for-desktop-up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20rem;
+    height: 100%;
+  }
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  &__container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+
+    &__logo {
+      @extend %logo;
+      margin: 2rem 0;
+    }
+    &__link {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 1.5rem;
+      color: var(--light);
+      @include a.text-style-paragraph;
+      @include a.text-hover;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,0 +1,205 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-within {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-within {
+      @content;
+    }
+  }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Kitty Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+@mixin centerwidth {
+  max-width: 100vw;
+  margin-inline: auto;
+}
+
+@mixin text-hover {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s ease, opacity 0.6s ease;
+  &:hover,
+  &:focus {
+    background-size: 100% 2px;
+    opacity: 0.8;
+  }
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  left: 0;
+  top: -500px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+@mixin for-phone-only {
+  @media (max-width: 549px) {
+    @content;
+  }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 550px) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 700px) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (min-width: 800px) {
+    @content;
+  }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+
+@mixin text-style-subheading {
+  font-size: 3rem;
+  font-family: var(--font);
+  font-weight: 700;
+  font-style: normal;
+  line-height: 5.3rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+@mixin text-style-heading {
+  font-size: 6.4rem;
+  font-family: var(--font);
+  font-weight: 700;
+  font-style: normal;
+  line-height: 5.3rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+@mixin text-style-paragraph {
+  font-size: 1.8rem;
+  font-family: var(--font);
+  font-weight: 400;
+  font-style: normal;
+  line-height: 2rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+@mixin text-style-paragraph-sm {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 3rem;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+}
+@mixin text-style-subheading-sm {
+  font-size: 2rem;
+  font-family: var(--font);
+  font-weight: 700;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+@mixin text-style-subheading-lg {
+  font-size: 4.8rem;
+  font-family: var(--font);
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: capitalize;
+  line-height: 5.8rem;
+}
+@mixin text-style-heading-lg {
+  font-size: 7.6rem;
+  font-family: var(--font);
+  font-weight: 700;
+  font-style: normal;
+  line-height: 9rem;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+@mixin text-style-paragraph-lg {
+  font-size: 2rem;
+  font-family: var(--font);
+  line-height: 34px;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@mixin hollow-text($width: 0.3rem, $color: #ffffff) {
+  color: transparent;
+  -webkit-text-stroke-width: $width;
+  -webkit-text-stroke-color: $color;
+}
+
+@mixin twitch-effect {
+  position: relative;
+  cursor: pointer;
+  &:before {
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: linear-gradient(
+      130deg,
+      transparent 0% 33%,
+      #5048cd 66%,
+      #e4309dba 83.5%,
+      #ff8c00 100%
+    );
+    background : {
+      size: 300% 300%;
+      position: 0% 0%;
+    }
+    transition: background-position 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+
+  &:hover:before,
+  &:active:before,
+  &:focus:before {
+    background-position: 100% 100%;
+    transform: scale(1.08, 1.03);
+  }
+}

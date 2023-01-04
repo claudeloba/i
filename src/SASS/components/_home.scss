@@ -1,0 +1,16 @@
+@use "../abstracts" as a;
+@forward "../abstracts/placeholders";
+
+.home_container {
+  text-align: center;
+
+  .title {
+    @include a.text-style-heading-lg;
+    @include a.centerwidth;
+    &__span {
+      @include a.hollow-text(0.1rem, black);
+      @extend %logo;
+      @include a.text-style-heading-lg;
+    }
+  }
+}

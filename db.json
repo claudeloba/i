@@ -1,0 +1,46 @@
+{
+  "names": [
+    {
+      "name": "Sara",
+      "age": "1",
+      "gender": "female",
+      "id": 6
+    },
+    {
+      "name": "Maja",
+      "age": "42",
+      "gender": "female",
+      "id": 7
+    },
+    {
+      "name": "saf",
+      "age": "2",
+      "gender": "male",
+      "id": 8
+    },
+    {
+      "name": "asf",
+      "age": "104",
+      "gender": "male",
+      "id": 12
+    },
+    {
+      "name": "Ginny",
+      "age": "25",
+      "gender": "female",
+      "id": 13
+    },
+    {
+      "name": "Kalle",
+      "age": "9",
+      "gender": "male",
+      "id": 14
+    },
+    {
+      "name": "Claude",
+      "age": "29",
+      "gender": "male",
+      "id": 16
+    }
+  ]
+}
