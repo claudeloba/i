@@ -2,14 +2,13 @@
 @forward "../abstracts/placeholders";
 
 .form {
-  text-align: center;
   max-width: 80rem;
   margin-inline: auto;
   @include a.text-style-paragraph-lg;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  align-items: center;
+  align-content: flex-start;
 
   &__label {
     margin-top: 2rem;

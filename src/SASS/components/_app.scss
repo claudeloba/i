@@ -1,10 +1,29 @@
 @use "../abstracts" as a;
 @forward "../abstracts/placeholders";
 
-.main-container {
-  margin: 4rem;
+.top {
+  background: url("../../../layered-waves-haikei.svg") no-repeat center;
+
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2rem;
+  h1 {
+    @include a.text-style-paragraph-lg;
+    span {
+      color: var(--dk);
+    }
+  }
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 8% 1fr;
   overflow: hidden;
-  background-color: rgb(255, 255, 255);
+  margin: 4rem;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -17,7 +36,12 @@
   &::-webkit-scrollbar {
     display: none;
   }
-  display: grid;
-  grid-template-columns: 20% 1fr;
-  grid-template-rows: 1fr;
+  .main-container {
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: 1fr;
+  }
 }

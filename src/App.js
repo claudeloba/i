@@ -5,9 +5,20 @@ import NewName from "./components/NewName";
 import ViewNames from "./components/ViewNames";
 import EditName from "./components/EditName";
 
+function Top() {
+  return (
+    <div className="top">
+      <h1>
+        People : <span>Claude-Marcel Loba</span>
+      </h1>
+    </div>
+  );
+}
+
 const App = () => {
   return (
     <div className="app">
+      <Top />
       <div className="main-container">
         <Navbar />
         <div className="routes">

@@ -10,13 +10,25 @@
   color: #fff;
   text-align: center;
   &__container {
+    height: 100%;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-
+    padding: 1rem;
     &__logo {
       @extend %logo;
-      margin: 2rem 0;
+      margin-block: 2rem;
+    }
+    &__self {
+      width: 12rem;
+      height: 12rem;
+      border-radius: 100vh;
+      order: 1;
+      margin-block: 2rem;
+      justify-self: center;
+      margin-top: auto;
+      margin-bottom: 2rem;
+      opacity: 0.8;
     }
     &__link {
       display: block;
